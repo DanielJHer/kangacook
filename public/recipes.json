@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "recipe_name": "Ramen",
+        "image": "ramen.webp",
+        "recipe": "1. Cook ramen noodles according to package instructions. 2. Prepare broth with soy sauce, miso, and dashi. 3. Add sliced pork, soft-boiled egg, green onions, seaweed, and bamboo shoots to broth. 4. Serve hot with chopsticks."
+    },
+    {
+        "id": 2,
+        "recipe_name": "Sushi Rolls",
+        "image": "sushi.webp",
+        "recipe": "1. Prepare sushi rice with rice vinegar, sugar, and salt. 2. Place nori on bamboo mat, spread rice evenly. 3. Add fillings like tuna, salmon, avocado, and cucumber. 4. Roll tightly and slice into pieces. 5. Serve with wasabi, pickled ginger, and soy sauce."
+    },
+    {
+        "id": 3,
+        "recipe_name": "Shrimp Fried Rice",
+        "image": "shrimprice.webp",
+        "recipe": "1. Cook rice. 2. Sauté garlic and onion in oil. 3. Add shrimp. 4. Add vegetables. 5. Scramble eggs. 6. Mix in rice and soy sauce. 7. Garnish and serve."
+    },
+    {
+        "id": 4,
+        "recipe_name": "Pho",
+        "image": "pho.webp",
+        "recipe": "1. Boil beef broth with spices. 2. Cook rice noodles. 3. Pour broth over noodles. 4. Add beef slices. 5. Garnish and serve."
+    },
+    {
+        "id": 5,
+        "recipe_name": "Kimchi",
+        "image": "kimchi.webp",
+        "recipe": "1. Cut napa cabbage and radishes into pieces. 2. Make a paste with chili pepper, garlic, ginger, and fish sauce. 3. Rub the paste onto the vegetables. 4. Pack tightly into jars and let ferment at room temperature for several days. 5. Serve as a side dish."
+    }
+]
