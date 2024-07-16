@@ -1,32 +1,51 @@
 [
     {
         "id": 1,
-        "recipe_name": "Ramen",
+        "title": "Ramen",
         "image": "ramen.webp",
         "recipe": "1. Cook ramen noodles according to package instructions. 2. Prepare broth with soy sauce, miso, and dashi. 3. Add sliced pork, soft-boiled egg, green onions, seaweed, and bamboo shoots to broth. 4. Serve hot with chopsticks."
     },
     {
         "id": 2,
-        "recipe_name": "Sushi Rolls",
+        "title": "Sushi Rolls",
         "image": "sushi.webp",
         "recipe": "1. Prepare sushi rice with rice vinegar, sugar, and salt. 2. Place nori on bamboo mat, spread rice evenly. 3. Add fillings like tuna, salmon, avocado, and cucumber. 4. Roll tightly and slice into pieces. 5. Serve with wasabi, pickled ginger, and soy sauce."
     },
     {
         "id": 3,
-        "recipe_name": "Shrimp Fried Rice",
+        "title": "Shrimp Fried Rice",
         "image": "shrimprice.webp",
         "recipe": "1. Cook rice. 2. Sauté garlic and onion in oil. 3. Add shrimp. 4. Add vegetables. 5. Scramble eggs. 6. Mix in rice and soy sauce. 7. Garnish and serve."
     },
     {
         "id": 4,
-        "recipe_name": "Pho",
+        "title": "Beef Pho",
         "image": "pho.webp",
         "recipe": "1. Boil beef broth with spices. 2. Cook rice noodles. 3. Pour broth over noodles. 4. Add beef slices. 5. Garnish and serve."
     },
     {
         "id": 5,
-        "recipe_name": "Kimchi",
+        "title": "Kimchi",
         "image": "kimchi.webp",
         "recipe": "1. Cut napa cabbage and radishes into pieces. 2. Make a paste with chili pepper, garlic, ginger, and fish sauce. 3. Rub the paste onto the vegetables. 4. Pack tightly into jars and let ferment at room temperature for several days. 5. Serve as a side dish."
+    },
+    {
+        "id": 6,
+        "title": "Mango Sticky Rice",
+        "image": "mango.webp",
+        "recipe": "1. Cook glutinous rice until tender. 2. Slice ripe mangoes. 3. Mix coconut milk with sugar and salt, and heat until dissolved. 4. Pour coconut milk mixture over the cooked rice. 5. Serve with mango slices and sprinkle with toasted sesame seeds."
+    },
+    {
+        "id": 7,
+        "title": "Tempura",
+        "image": "tempura.webp",
+        "recipe": "1. Prepare a batter with cold water and flour. 2. Dip shrimp and vegetables into the batter. 3. Deep fry until golden and crispy. 4. Serve with tentsuyu dipping sauce. 5. Enjoy with grated daikon radish."
+    },
+    {
+        "id": 8,
+        "title": "Spring Rolls",
+        "image": "spring_rolls.webp",
+        "recipe": "1. Soak rice paper in water until soft. 2. Fill with shrimp, vermicelli, lettuce, and herbs. 3. Roll tightly and seal. 4. Serve with hoisin-peanut dipping sauce. 5. Enjoy fresh and crispy."
     }
+
 ]

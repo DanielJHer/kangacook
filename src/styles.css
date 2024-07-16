@@ -9,7 +9,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: #fff;
-  background-color: #d28603;
+  background-color: #f59d04;
 }
 
 .container {
@@ -22,38 +22,8 @@ body {
   margin-top: 50px;
 }
 
-.search-input {
-  padding: 15px;
-  margin: 25px 10px;
-  width: 100%;
-  font-size: 16px;
-  border-radius: 100px;
-  border: 1px solid #ccc;
-}
-
-/* Genre and Filter Bar Styles */
-.filter-bar {
-  display: flex;
-  justify-content: right;
-}
-
-.filter-slot {
-  background-color: #2c2c2c;
-  padding: 0 25px;
-  margin: 10px;
-  border-radius: 50px;
-}
-
-.filter-dropdown {
-  padding: 8px;
-  margin: 10px;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #333;
-}
-
-/* Movies Grid Styles */
-.movies-grid, .watchlist {
+/* Recipes Grid Styles */
+.recipes-grid, .favoriteslist {
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
   gap: 2rem 2rem;  
@@ -61,8 +31,8 @@ body {
   justify-content: center;
 }
 
-/* Movie Card Styles */
-.movie-card {
+/* Recipe Card Styles */
+.recipe-card {
   background-color: #272727;
   border-radius: 8px;
   overflow: hidden;
@@ -70,11 +40,11 @@ body {
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .5);
 }
 
-.movie-card:hover {
+.recipe-card:hover {
   transform: scale(1.03);
 }
 
-.movie-card img {
+.recipe-card img {
   width: 250px;
   height: auto;
   display: block;
@@ -82,7 +52,7 @@ body {
   object-position: center;
 }
 
-.movie-card-info {
+.recipe-card-info {
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -90,28 +60,18 @@ body {
   text-align: center;
 }
 
-.movie-card-title {
+.recipe-card-title {
   font-size: 1.1rem;
   font-weight: bold;
 }
 
-.movie-card-rating {
-  font-size: 0.9rem;
-  font-weight: bold;
-  background:#141414;
-  padding: 3px 10px;
-  margin: 0 auto;
-  width: 50px;
-  border-radius: 50px;
-}
-
-.movie-card-genre {
+.recipe-card-recipe {
   font-size: 0.9rem;
   margin-right: 10px;
 }
 
-/* Watchlist Button Styles */
-.watchlist-btn {
+/* Favorites Button Styles */
+.favorites-btn {
   border: none;
   background: #2196F3;
   color: white;
@@ -134,18 +94,6 @@ body {
 .footer-text {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.9rem;
-}
-
-.rating-good {
-  color: rgb(148, 255, 105);
-}
-
-.rating-ok {
-  color: rgb(255, 209, 123);
-}
-
-.rating-bad {
-  color: rgb(255, 123, 123);
 }
 
 .title {
