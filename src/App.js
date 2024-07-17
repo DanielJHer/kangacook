@@ -13,9 +13,10 @@ function App() {
   const [favoritesList, setfavoritesList] = useState([]);
 
   useEffect(()=> {
-    fetch("recipes.json")
+    fetch('http://localhost:8000/api/get-data/')
     .then(response => response.json())
     .then(data => setRecipes(data))
+    .catch((error) => console.error('Error fetching data:', error));
 }, []);
 
   const toggleFavorites = (recipeId) => {
