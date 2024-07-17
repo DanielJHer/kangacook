@@ -4,4 +4,5 @@ from . import views
 urlpatterns = [
     path('get-data/', views.get_data, name='get_data'),
     path('post-data/', views.post_data, name='post_data'),
+    path('toggle-favorite/', views.toggle_favorite, name='toggle_favorite'),
 ]

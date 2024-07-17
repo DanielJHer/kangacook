@@ -22,5 +22,23 @@ class PostData(View):
             file.seek(0)
             json.dump(current_data, file, indent=4)
         return JsonResponse(data, status=201)
+    
+@method_decorator(csrf_exempt, name='dispatch')
+class ToggleFavorite(View):
+    def post(self, request):
+        data = json.loads(request.body)
+        try:
+            with open(DATA_FILE, 'r+') as file:
+                recipes = json.load(file)
+                for recipe in recipes:
+                    if recipe['id'] == data['id']:
+                        recipe['favorite'] = data['favorite']
+                file.seek(0)
+                file.truncate()
+                json.dump(recipes, file, indent=4)
+            return JsonResponse({'status': 'success'}, status=200)
+        except FileNotFoundError:
+            return JsonResponse({'error': 'File not found'}, status=404)
 
 post_data = PostData.as_view()
+toggle_favorite = ToggleFavorite.as_view()

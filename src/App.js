@@ -7,23 +7,56 @@ import FavoritesList from './Components/FavoritesList';
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import {useState, useEffect} from "react";
 
-function App() {
+export default function App() {
 
   const [recipes, setRecipes] = useState([]);
   const [favoritesList, setfavoritesList] = useState([]);
 
-  useEffect(()=> {
+  useEffect(() => {
+    // Fetch recipes from the backend
     fetch('http://localhost:8000/api/get-data/')
-    .then(response => response.json())
-    .then(data => setRecipes(data))
-    .catch((error) => console.error('Error fetching data:', error));
+        .then(response => response.json())
+        .then(data => {
+            setRecipes(data);
+            // setting favorites
+            const favoriteIds = data.filter(recipe => recipe.favorite).map(recipe => recipe.id);
+            setfavoritesList(favoriteIds);
+        })
+        .catch(error => console.error('Error fetching data:', error));
 }, []);
 
+  // const toggleFavorites = (recipeId) => {
+  //   setfavoritesList(prev =>
+  //     prev.includes(recipeId) ? prev.filter(id => id !== recipeId) : [...prev, recipeId]
+  //   )
+  // }
+
   const toggleFavorites = (recipeId) => {
-    setfavoritesList(prev =>
-      prev.includes(recipeId) ? prev.filter(id => id !== recipeId) : [...prev, recipeId]
-    )
-  }
+    // update and reset recipes after toggle
+    const updatedRecipes = recipes.map((recipe) => {
+        if (recipe.id === recipeId) {
+            return { ...recipe, favorite: !recipe.favorite };
+        }
+        return recipe;
+    });
+    setRecipes(updatedRecipes);
+
+    // update and reset favorites list
+    const updatedFavoritesList = updatedRecipes.filter(recipe => recipe.favorite).map(recipe => recipe.id);
+    setfavoritesList(updatedFavoritesList);
+
+    const isFavorite = updatedRecipes.find((r) => r.id === recipeId).favorite;
+    fetch('http://localhost:8000/api/toggle-favorite/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ id: recipeId, favorite: isFavorite }),
+    })
+    .then(response => response.json())
+    .then(data => console.log('Favorite status updated successfully:', data))
+    .catch(error => console.error('Error updating favorite status:', error));
+};
 
   return (
     <div className="App">
@@ -53,4 +86,3 @@ function App() {
   );
 }
 
-export default App;
