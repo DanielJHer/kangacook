@@ -25,12 +25,6 @@ export default function App() {
         .catch(error => console.error('Error fetching data:', error));
 }, []);
 
-  // const toggleFavorites = (recipeId) => {
-  //   setfavoritesList(prev =>
-  //     prev.includes(recipeId) ? prev.filter(id => id !== recipeId) : [...prev, recipeId]
-  //   )
-  // }
-
   const toggleFavorites = (recipeId) => {
     // update and reset recipes after toggle
     const updatedRecipes = recipes.map((recipe) => {
