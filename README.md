@@ -1,5 +1,3 @@
-# Kangacook Take Home
-
 ## Introduction
 This project is a web application that leverages a React frontend and a Django backend. The frontend is deployed on AWS S3, and the backend is deployed on AWS EC2. The frontend communicates with the backend using HTTP requests to retrieve and manipulate data.
 
